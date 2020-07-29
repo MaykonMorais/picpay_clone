@@ -42,6 +42,14 @@ export default function Navigation() {
           return <Icon name={name} size={size} color={color} />
         }
       })}
+      tabBarOptions={{
+        style: {
+          backgroundColor: '#131418',
+          borderTopColor: 'rgba(255, 255, 255, 0.2)'
+        },
+        activeTintColor: '#fff',
+        inactiveTintColor: '#92929c'
+      }}
     >
         <Tab.Screen 
         name="Home"
