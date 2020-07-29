@@ -1,7 +1,12 @@
 import React from 'react'
 
 import {Text} from 'react-native'
+import { Wrapper } from './styles'
 
 export default function Home() {
-  return <Text>Home</Text>
+  return (
+    <Wrapper>
+      <Text>Home</Text>
+    </Wrapper>
+  )
 }
