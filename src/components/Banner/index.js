@@ -6,7 +6,7 @@ import img13 from '../../images/13.png'
 
 export default function Banner() {
 
-  return (
+  return (  
     <Container>
      <Details>
         <Title>Cobre um amigo</Title>
