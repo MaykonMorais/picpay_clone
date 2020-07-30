@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Feather, MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons'
+import { Feather, MaterialCommunityIcons, FontAwesome, AntDesign } from '@expo/vector-icons'
 
 import { Switch } from 'react-native'
 
@@ -19,7 +19,22 @@ import {
   ActionLabel,
   UseBalance,
   UseBalanceTitle,
+  PaymentMethods,
+  PaymentmethodsTitle,
+  Card,
+  CardBody,
+  CardDetails,
+  CardTitle,
+  CardInfo,
+  Img,
+  AddButton, 
+  AddLabel,
+  UseTicketButton,
+  UseTicketLabel,
 } from './styles'
+
+
+import creditCard from '../../images/credit-card.png'
 
 export default function Wallet() {
   return (
@@ -54,6 +69,36 @@ export default function Wallet() {
           <UseBalanceTitle>Usar saldo ao pagar</UseBalanceTitle>
           <Switch />
       </UseBalance>
+
+
+      <PaymentMethods>
+        <PaymentmethodsTitle>
+          Formas de pagamentos
+        </PaymentmethodsTitle>
+
+        <Card>
+          <CardBody>
+            <CardDetails>
+              <CardTitle>Cadastre seu cartão de crédito</CardTitle> 
+              <CardInfo>
+                Cadastre seu cartão de crédito para poder fazer pagamentos mesmo quando não tiver saldo no seu picpay.
+              </CardInfo>
+            </CardDetails>
+
+            <Img source={creditCard} resizeMode="contain" />
+          </CardBody>
+
+          <AddButton>
+            <AntDesign name="pluscircleo" size={30} color="#0db060" />
+            <AddLabel>Adicionar cartão de crédito</AddLabel>
+          </AddButton>
+        </Card>
+      </PaymentMethods>
+      
+      <UseTicketButton>
+        <MaterialCommunityIcons name="ticket-outline" size={20} color="#0db060"/>
+        <UseTicketLabel>Usar código promocional</UseTicketLabel>
+      </UseTicketButton>
     </Wrapper>
   )
 } 
