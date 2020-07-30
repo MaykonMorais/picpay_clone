@@ -13,19 +13,19 @@ import Img7 from '../../images/07.png'
 const items = [
   {
     img: Img1,
-    label: 'Doações'
+    label: 'Recarga'
   },
   {
     img: Img2,
-    label: 'Doações'
+    label: 'Uber'
   },
   {
     img: Img3,
-    label: 'Doações'
+    label: 'Ônibus'
   },
   {
     img: Img4,
-    label: 'Doações'
+    label: 'TV'
   },
   {
     img: Img5,
@@ -33,11 +33,11 @@ const items = [
   },
   {
     img: Img6,
-    label: 'Doações'
+    label: 'Barras'
   },
   {
     img: Img7,
-    label: 'Doações'
+    label: 'FAQ'
   }
 ]
 
