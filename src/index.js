@@ -3,7 +3,6 @@ import { StatusBar } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import Navigation from './navigation'
 
-
 export default function App() {
   return (
     <>
