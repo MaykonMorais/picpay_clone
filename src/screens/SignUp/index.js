@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Feather } from '@expo/vector-icons'
 
+import * as Animatable from 'react-native-animatable'
+
 import { 
   SignUpContainer, Header,
   BackButton, 
@@ -21,19 +23,21 @@ import {
   AlreadyRegisterLabel,
    } from './styles'
 
-export default function SignUp() {
+export default function SignUp({ navigation }) {
   const [name, setName] = useState('')
 
   return (
     <>
     <SignUpContainer>
       <Header>
-        <BackButton activeOpacity={0.4}>
+        <BackButton onPress={() => navigation.goBack()} activeOpacity={0.4}>
           <Feather name="arrow-left" size={28} color="#19c872"/>
         </BackButton>
       </Header>
 
       <SignUpContent>
+      <Animatable.View animation="slideInRight" duration={600}>
+
         <SignUpBody>
           <InfoMessage>
               <ContentTitle>Qual o seu nome?</ContentTitle>
@@ -61,7 +65,11 @@ export default function SignUp() {
             <AlreadyRegisterLabel>Já sou cadastrado</AlreadyRegisterLabel>
           </AlreadyRegisterButton>
         </AlreadyRegister>
+        </Animatable.View>
+
       </SignUpContent>
+      
+      
     </SignUpContainer>
   </>
   )
