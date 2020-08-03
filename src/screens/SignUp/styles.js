@@ -3,20 +3,25 @@ import { TextInput } from 'react-native-paper'
 
 export const SignUpContainer = styled.View`
   flex-direction: column;
+  flex: 1;
 `;
 
 export const Header = styled.View`
-  margin-top: 20px;
+  margin: 20px 0px;
   padding:  2px 20px;
-  margin-bottom: 25px;
 `;
 
 export const BackButton = styled.TouchableOpacity`
 `;
 
 export const SignUpContent= styled.View`
+  flex: 1;
+  justify-content: space-between;
+`;
+
+export const SignUpBody = styled.View`
   flex-direction: column;
-  align-items: center;
+  justify-content:  center;
   padding: 0px 8px;
 `;
 
@@ -44,7 +49,7 @@ export const UserInputs = styled.View`
   height: 70px;
   align-items: center;
   justify-content:  center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 `; 
 
 export const InputText = styled(TextInput)`
@@ -60,7 +65,9 @@ export const UserAction  =  styled.View`
   align-items: center;
   height: 60px;
   width: 100%;
+  margin-bottom: 20px;
 `;
+
 export const FowardButton =  styled.TouchableOpacity`
   height: 45px;
   width:  100%;
@@ -74,4 +81,26 @@ export const FowardButton =  styled.TouchableOpacity`
 export const FowardButtonLabel = styled.Text`
   color: #fff;
   font-size: 16px;
+`;
+
+
+export const ContractTerms = styled(ContentLabel)`
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+`;
+
+export const RedirectLink = styled.Text`
+  color: #11c770;
+`;
+
+
+export const AlreadyRegister = styled.View`
+`;
+
+export const AlreadyRegisterButton = styled.TouchableOpacity``; 
+
+export const AlreadyRegisterLabel = styled(ContentLabel)`
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 12px;
 `;
