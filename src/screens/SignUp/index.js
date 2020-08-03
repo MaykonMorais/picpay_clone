@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
 import { Feather } from '@expo/vector-icons'
-import { TextInput } from 'react-native-paper'
 
-
-import { SignUpContainer, Header, BackButton,  SignUpContent, InfoMessage ,ContentTitle, ContentLabel, UserInputs, InputText } from './styles'
+import { SignUpContainer, Header,
+   BackButton, 
+   SignUpContent,
+   InfoMessage,
+   ContentTitle,
+   ContentLabel,
+   UserInputs,
+   InputText,
+   UserAction, 
+   FowardButton,
+   FowardButtonLabel, 
+   } from './styles'
 
 export default function SignUp() {
   const [name, setName] = useState('')
@@ -23,9 +32,15 @@ export default function SignUp() {
           </InfoMessage>
           
           <UserInputs>
-           <InputText tam={110} label="Nome"  />
-           <InputText tam={150} label="Sobrenome"  />
+           <InputText tam={120} label="Nome"  />
+           <InputText tam={178} label="Sobrenome"  /> 
           </UserInputs>
+
+          <UserAction>
+            <FowardButton activeOpacity={0.9}>
+                <FowardButtonLabel>Avançar</FowardButtonLabel>
+            </FowardButton>
+          </UserAction>
           
       </SignUpContent>
     </SignUpContainer>
