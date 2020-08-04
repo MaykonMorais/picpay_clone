@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-import BackButton from '../BackButton'
-
 import { 
   SignUpContainer,
   Header, 
@@ -12,18 +10,17 @@ import {
   AlreadyRegisterLabel,
    } from './styles'
 
-export default function SignUpLayout({ navigation }) {
-  const [name, setName] = useState('')
+import * as Animatable from 'react-native-animatable'
 
+export default function SignUpLayout({ navigation, children }) {
   return (
     <SignUpContainer>
       <Header>
-         <BackButton onPress={navigation.goBack} />
       </Header>
 
       <SignUpContent>
-        <SignUpBody>
-
+        <SignUpBody animation="slideInRight">
+            { children }  
         </SignUpBody>
         
           <AlreadyRegister>

@@ -29,7 +29,7 @@ export default function StepOne({navigation}) {
             </UserInputs>
 
           <UserAction>
-            <FowardButton activeOpacity={0.9}>
+            <FowardButton activeOpacity={0.9} onPress={() => navigation.navigate('SignUpTwo')}>
                   <FowardButtonLabel>Avançar</FowardButtonLabel>
             </FowardButton>
           </UserAction>
