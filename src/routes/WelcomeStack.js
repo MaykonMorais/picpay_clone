@@ -3,7 +3,7 @@ import { NavigationContainer, } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
 import Welcome from '../screens/Welcome'
-import SignUp  from '../screens/SignUp'
+import StepOne from '../components/StepOne'
 
 const Stack = createStackNavigator()
 
@@ -14,7 +14,7 @@ export default function WelcomeStack() {
           <Stack.Screen name="Welcome" component={Welcome}/>
           <Stack.Screen
             name="SignUp"
-            component={SignUp} />
+            component={StepOne} />
       </Stack.Navigator>
     </NavigationContainer>
   )
