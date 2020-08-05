@@ -1,8 +1,11 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { DefaultTheme ,Provider as PaperProvider } from 'react-native-paper' 
+
+import { Provider as StoreProvider } from 'react-redux'
+import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper' 
 
 import App from './src'
+import store from './src/store'
 
 const theme = {
   ...DefaultTheme,
@@ -14,9 +17,11 @@ const theme = {
 
 export default function Main() {
   return (
-    <PaperProvider theme={theme}>
-      <App />
-    </PaperProvider>
+    <StoreProvider store={store}>
+      <PaperProvider theme={theme}>
+        <App />
+      </PaperProvider>
+    </StoreProvider>
   );_
 };
 
