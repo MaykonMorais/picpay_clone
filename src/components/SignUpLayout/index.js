@@ -12,7 +12,7 @@ import {
   AlreadyRegisterLabel,
 } from './styles'
 
-export default function SignUpLayout({ navigation, children }) {
+export default function SignUpLayout({ children }) {
   return (
     <>
     <StatusBar barStyle="dark-content" backgroundColor="#f2f2f2" />

@@ -4,8 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import Welcome from '../screens/Welcome'
 
-import StepOne from '../components/StepOne'
-import StepTwo from '../components/StepTwo'
+import StepOne from '../components/SignUpSteps/StepOne'
+import StepTwo from '../components/SignUpSteps/StepTwo'
 
 const SignUpStack = createStackNavigator()
 const RootStack = createStackNavigator()

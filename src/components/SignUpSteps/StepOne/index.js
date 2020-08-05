@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-import LayoutSignUp from '../SignUpLayout'
+import LayoutSignUp from '../../SignUpLayout'
 
 import {
   InfoMessage,
@@ -13,9 +13,10 @@ import {
   FowardButtonLabel,
   RedirectLink,
   ContractTerms,
-} from './styles'
+} from '../styles'
 
-export default function StepOne({navigation}) {
+export default function StepOne({ navigation }) {
+  
   return (
     <LayoutSignUp navigation={navigation}>
             <InfoMessage>
