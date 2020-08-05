@@ -9,11 +9,6 @@ export const SignUpContainer = styled.View`
   padding-top:  90px;
 `;
 
-export const Header = styled.View`
-  margin: 20px 0px;
-  padding:  2px 20px;
-`;
-
 export const BackButton = styled.TouchableOpacity`
 `;
 
@@ -25,7 +20,8 @@ export const SignUpContent= styled.View`
 export const SignUpBody = styled(Animatable.View)`
   flex-direction: column;
   justify-content:  center;
-  padding: 0px 8px;
+  padding: 0px 14px;
+
 `;
 
 export const InfoMessage = styled.View`

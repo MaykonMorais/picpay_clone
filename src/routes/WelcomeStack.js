@@ -6,6 +6,7 @@ import Welcome from '../screens/Welcome'
 
 import StepOne from '../components/SignUpSteps/StepOne'
 import StepTwo from '../components/SignUpSteps/StepTwo'
+import StepThree from '../components/SignUpSteps/StepThree'
 
 const SignUpStack = createStackNavigator()
 const RootStack = createStackNavigator()
@@ -24,6 +25,7 @@ function SignUp() {
               animationEnabled: false,
             }}
             />
+
           <SignUpStack.Screen 
             name="SignUpTwo"
             component={StepTwo}
@@ -32,6 +34,16 @@ function SignUp() {
               headerTransparent:  true,
               animationEnabled: false,
             }}
+          />
+
+          <SignUpStack.Screen 
+            name="SignUpThree"
+            options={{
+              headerTitle: null, 
+              headerTransparent: true,
+              animationEnabled: false,
+            }}
+            component={StepThree}
           />
       </SignUpStack.Navigator>       
   )

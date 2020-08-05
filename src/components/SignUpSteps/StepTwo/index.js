@@ -13,7 +13,9 @@ import {
   UserAction,
   FowardButton,
   FowardButtonLabel,
-}  from '../styles'
+}  from '../commonStyles'
+
+import { HasCodeButton, HasCodeLabel } from './styles'
 
 export default function StepTwo({ navigation }) {
   return (
@@ -29,8 +31,8 @@ export default function StepTwo({ navigation }) {
       <UserInputs>
         <InputText 
         keyboardType="numeric"
-        style={{textAlign: 'center', justifyContent: 'center'}}
-        tam={50} label="DDD"
+        style={{ textAlign: 'center', justifyContent: 'center'}}
+        tam={40} label="DDD"
         render={props => <TextInputMask 
           {...props} 
           type="custom"
@@ -41,20 +43,24 @@ export default function StepTwo({ navigation }) {
 
         <InputText 
           keyboardType="numeric"
-          tam={220} label="Número do seu celular"
+          tam={270} label="Número do seu celular"
           render={props => <TextInputMask 
             {...props} 
             type="custom"
             options={{
-            mask:"9 9999 9999"
+            mask:"99999 9999"
           }} />}
         />
       </UserInputs>
 
       <UserAction>
         <FowardButton activeOpacity={0.9} onPress={() => navigation.navigate('SignUpThree')}>
-        <FowardButtonLabel>Avançar</FowardButtonLabel>
+          <FowardButtonLabel>Receber código via SMS</FowardButtonLabel>
         </FowardButton>
+
+        <HasCodeButton>
+          <HasCodeLabel>Já possuo código</HasCodeLabel>
+        </HasCodeButton>
       </UserAction>
     </SignUpLayout>
   )

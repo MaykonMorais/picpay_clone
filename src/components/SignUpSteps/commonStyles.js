@@ -1,6 +1,6 @@
 import styled from 'styled-components/native'
 
-import {TextInput} from 'react-native-paper'
+import { TextInput } from 'react-native-paper'
 
 export const InfoMessage = styled.View`
   align-items: center;
@@ -26,7 +26,7 @@ export const UserInputs = styled.View`
   height: 70px;
   align-items: center;
   justify-content:  center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 `; 
 
 export const InputText = styled(TextInput)`
@@ -40,9 +40,9 @@ export const InputText = styled(TextInput)`
 export const UserAction  =  styled.View`
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 80px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 `;
 
 export const FowardButton =  styled.TouchableOpacity`

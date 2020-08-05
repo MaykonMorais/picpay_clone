@@ -13,7 +13,7 @@ import {
   FowardButtonLabel,
   RedirectLink,
   ContractTerms,
-} from '../styles'
+} from '../commonStyles'
 
 export default function StepOne({ navigation }) {
   
