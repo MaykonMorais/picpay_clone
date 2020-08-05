@@ -1,25 +1,24 @@
 import React, { useState } from 'react'
 
+import { StatusBar } from 'react-native'
+
+
 import { 
-  SignUpContainer,
-  Header, 
+  SignUpContainer, 
   SignUpContent,
   SignUpBody,
   AlreadyRegister,
   AlreadyRegisterButton,
   AlreadyRegisterLabel,
-   } from './styles'
-
-import * as Animatable from 'react-native-animatable'
+} from './styles'
 
 export default function SignUpLayout({ navigation, children }) {
   return (
+    <>
+    <StatusBar barStyle="dark-content" backgroundColor="#f2f2f2" />
     <SignUpContainer>
-      <Header>
-      </Header>
-
       <SignUpContent>
-        <SignUpBody animation="slideInRight">
+        <SignUpBody animation="slideInRight" duration={600}>
             { children }  
         </SignUpBody>
         
@@ -29,7 +28,7 @@ export default function SignUpLayout({ navigation, children }) {
             </AlreadyRegisterButton>
           </AlreadyRegister>       
       </SignUpContent>
-
     </SignUpContainer>
+    </>
   )
 }

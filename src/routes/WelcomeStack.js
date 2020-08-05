@@ -2,12 +2,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import { MaterialCommunityIcons } from '@expo/vector-icons'
-
 import Welcome from '../screens/Welcome'
-
-
-import BackButton from '../components/BackButton'
 
 import StepOne from '../components/StepOne'
 import StepTwo from '../components/StepTwo'
@@ -17,7 +12,9 @@ const RootStack = createStackNavigator()
 
 function SignUp() {
   return (
-    <SignUpStack.Navigator> 
+    <SignUpStack.Navigator screenOptions={{
+      headerTintColor: '#22ba74',
+    }}> 
           <SignUpStack.Screen
             name="SignUpOne"
             component={StepOne}
@@ -44,7 +41,7 @@ function SignUp() {
 export default function WelcomeStack() {
   return (
     <NavigationContainer>
-      <RootStack.Navigator headerMode="none">
+      <RootStack.Navigator headerMode="none" >
           <RootStack.Screen 
           name="Welcome" 
           component={Welcome}

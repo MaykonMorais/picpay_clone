@@ -2,12 +2,14 @@ import React from 'react'
 
 import fisrtWoman from '../../images/woman2.png' 
 
-import { TouchableOpacity } from 'react-native'
+import { StatusBar } from 'react-native'
 
 import { WelcomeContainer, ImgBackground, WelcomeContent, WelcomeContentTitle, WelcomeActions, ActionButton, LabelButton } from './styles'
 
 export default function Welcome({ navigation }) {
   return (
+    <>
+    <StatusBar barStyle="dark-content" translucent backgroundColor="transparent" />
     <WelcomeContainer>
       <ImgBackground source={fisrtWoman} resizeMode="cover">
         <WelcomeContent>
@@ -27,5 +29,6 @@ export default function Welcome({ navigation }) {
         </WelcomeContent>
       </ImgBackground>
     </WelcomeContainer>
+    </>
   );
 }

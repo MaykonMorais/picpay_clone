@@ -6,6 +6,7 @@ import * as Animatable from 'react-native-animatable'
 export const SignUpContainer = styled.View`
   flex-direction: column;
   flex: 1;
+  padding-top:  90px;
 `;
 
 export const Header = styled.View`
